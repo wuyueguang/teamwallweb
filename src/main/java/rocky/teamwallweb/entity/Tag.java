@@ -7,8 +7,8 @@ public class Tag {
 	String tag;
 
 	
+	public Tag() {}
 	public Tag(String uid, String tag) {
-		super();
 		this.uid = uid;
 		this.tag = tag;
 	}
