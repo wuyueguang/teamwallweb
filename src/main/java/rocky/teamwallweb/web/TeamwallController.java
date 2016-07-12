@@ -29,8 +29,8 @@ public class TeamwallController {
 		//调用RESTful API，获取列表
 		String url = "http://127.0.0.1:8080/teamwall/tag/"+uid+"/taglist";
 		RestTemplate restTemplate = new RestTemplate();
-		TagDTO dto = restTemplate.getForObject(url, TagDTO.class);
-
+		
+		JsonResult<List<Tag>> dto = restTemplate.getForObject(url, JsonResult.class);
 		List<Tag> list = dto.getData();
 		
 		//装配model传递给jsp
